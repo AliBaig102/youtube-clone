@@ -1,0 +1,180 @@
+@layer utilities{
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h-1vw{
+    height: var(--1vw);
+}
+.h-2vw{
+    height: var(--2vw);
+}
+.h-3vw{
+    height: var(--3vw);
+}
+.h-4vw{
+    height: var(--4vw);
+}
+.h-5vw{
+    height: var(--5vw);
+}
+.w-1vw{
+    width: var(--1vw);
+}
+.w-2vw{
+    width: var(--2vw);
+}
+.w-3vw{
+    width: var(--3vw);
+}
+.w-4vw{
+    width: var(--4vw);
+}
+.w-5vw{
+    width: var(--5vw);
+}
+.w-10\% {
+    width: 10%;
+}
+.w-20\% {
+    width: 20%;
+}
+.w-30\% {
+    width: 30%;
+}
+.w-40\% {
+    width: 40%;
+}
+.w-50\% {
+    width: 50%;
+}
+.w-60\% {
+    width: 60%;
+}
+.w-70\% {
+    width: 70%;
+}
+.w-80\% {
+    width: 80%;
+}
+.w-90\% {
+    width: 90%;
+}
+.w-100\% {
+    width: 100%;
+}
+.h-10\% {
+    height: 10%;
+}
+.h-20\% {
+    height: 20%;
+}
+.h-30\% {
+    height: 30%;
+}
+.h-40\% {
+    height: 40%;
+}
+.h-50\% {
+    height: 50%;
+}
+.h-60\% {
+    height: 60%;
+}
+.h-70\% {
+    height: 70%;
+}
+.h-80\% {
+    height: 80%;
+}
+.h-90\% {
+    height: 90%;
+}
+.h-100\% {
+    height: 100%;
+}
+.w-100\%-h-100\%{
+    width: 100%;
+    height: 100%;
+}
+.w-1vw-h-1vw{
+    width: var(--1vw);
+    height: var(--1vw);
+}
+.w-2vw-h-2vw{
+    width: var(--2vw);
+    height: var(--2vw);
+}
+.w-3vw-h-3vw{
+    width: var(--3vw);
+    height: var(--3vw);
+}
+.br-\.3vw{
+    border-radius: var(--03vw);
+}
+.br-\.5vw{
+    border-radius: var(--05vw);
+}
+.bg-dark{
+    background: var(--bg-color);
+}
+.bg-light{
+    background: var(--color1);
+}
+.bg-white{
+    background: var(--bg-light);
+}
+.br-round{
+    border-radius: 50vw;
+}
+.bx-shadow{
+    box-shadow: 0 0 .5vw var(--color1);
+}
+.top-50\%{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.left-50\%{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.top-50\%-left-50\%{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.fz-1vw {
+    font-size: var(--1vw);
+}
+.fz-1\.5vw {
+    font-size: var(--1-5vw);
+}
+.fz-2vw {
+    font-size: var(--2vw);
+}
+.fz-3vw {
+    font-size: var(--3vw);
+}
+.fz-4vw {
+    font-size: var(--5vw);
+}
+.gap-1vw {
+    gap: var(--1vw);
+}
+.gap-1\.5vw {
+    gap: var(--1-5vw);
+}
+.gap-\.5vw {
+    gap: var(--05vw);
+}
+.border\.1vw {
+    border: .1vw solid var(--color1);
+}
+.border\.2vw {
+    border: .2vw solid var(--color1);
+}
+.border\.3vw {
+    border: .3vw solid var(--color1);
+}
+}
