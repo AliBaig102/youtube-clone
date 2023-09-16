@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
         screens:{
-            'md-phone':'420px',
+            'md-phone':'450px',
         }
         // colors:{
         //     'light':'#f2f2f2',
