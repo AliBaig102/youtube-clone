@@ -147,6 +147,15 @@
 .fz-1vw {
     font-size: var(--1vw);
 }
+.fz-\.5vw {
+    font-size: var(--05vw);
+}
+.fz-\.8vw {
+    font-size: calc(var(--03vw) + var(--05vw));
+}
+.fz-1\.3vw {
+    font-size: var(--1-3vw);
+}
 .fz-1\.5vw {
     font-size: var(--1-5vw);
 }

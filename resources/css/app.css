@@ -18,10 +18,12 @@
     --4vw:clamp(50px,4vw,80px);
     /*--5vw:max(5vw,50px);*/
     --5vw: clamp(60px,5vw,100px);
+    --6vw: clamp(70px,6vw,120px);
     --bg-color: #0f0f0f;
     --color1: #f2f2f2;
     --bg-light: #ffffff;
     --white-trans: rgba(255, 255, 255, 0.47);
+    --black-trans: rgba(0, 0, 0, 0.47);
     --blue-trans: rgba(0, 72, 255, 0.16);
     --color2:rgb(107 114 128);
     --color3:rgb(229 231 235);
@@ -195,7 +197,7 @@ nav{
         display: flex;
     }
 }
-iconify-icon[data-title]{
+nav iconify-icon[data-title]{
     position: relative;
     &:hover{
         &::before{
@@ -375,6 +377,7 @@ hr{
      top: 0;
     }
 }
+/* Short Page Css*/
 #comment_input{
     border-bottom: 2px solid var(--bg-color);
     width: 90%;
@@ -405,5 +408,45 @@ hr{
 .bottom_buttons{
     &.active{
         width: 85%;
+    }
+}
+/* Library Page CSS*/
+
+.watch_latter_and_queue{
+    @apply absolute  top-0 gap-1 right-0 flex flex-col p-1;
+    display: none;
+    &.active{
+        display: flex;
+    }
+    & > iconify-icon{
+        @apply fz-1.3vw bg-black w-2vw-h-2vw d-flex br-.3vw cursor-pointer z-[2];
+        &:hover:before{
+            @apply -left-[210%] w-fit px-3;
+        }
+        &:before{
+            content: attr(data-title);
+            @apply absolute whitespace-nowrap -left-[150%] h-[--2vw] w-0 overflow-hidden d-flex z-[-1] br-.3vw   bg-black fz-.8vw;
+            transition: left .5s,width .5s;
+        }
+    }
+
+}
+.progressbar_container:hover{
+
+& .progressbar_thump{
+    &:before{
+        content: '';
+        @apply absolute w-[10px] h-[10px] top-50% br-round bg-red-700 right-[-25%];
+
+    }
+}
+}
+.image_container .image{
+    transition: .5s;
+    z-index: 11;
+    opacity: 1;
+    &.active{
+        opacity: 0;
+        z-index: -1;
     }
 }
