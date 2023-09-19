@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 //    return view('content');
 //})->name('home');
 //Route::get('/shorts', function () {
-//    return view('shorts');
+//    return view('shorts'  );
 //})->name('shorts');
 Route::view('/subscription','subscription')->name('subscription');
 Route::view('/shorts','shorts')->name('shorts');
 Route::view('/library','library')->name('library');
+Route::view('/history','history')->name('history');
 Route::view('/','content')->name('home');

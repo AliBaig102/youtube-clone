@@ -12,7 +12,7 @@
         <hr>
         <ul>
             <li class="@if($activeLink=='library') active @endif" onclick="window.location='{{route('library')}}'"><iconify-icon icon="material-symbols:video-library-outline"></iconify-icon> <a class="translated_text">library</a></li>
-            <li><iconify-icon icon="material-symbols:history"></iconify-icon> <a class="translated_text">history</a></li>
+            <li class="@if($activeLink=='history') active @endif" onclick="window.location='{{route('history')}}'"><iconify-icon icon="material-symbols:history"></iconify-icon> <a class="translated_text">history</a></li>
         </ul>
         <hr>
         <div>

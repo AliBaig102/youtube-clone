@@ -7,6 +7,6 @@
     </ul>
     <ul class="hidden sm:block">
         <li class="flex flex-col  items-center justify-center @if($activeLink=='library') active @endif" onclick="window.location='{{route('library')}}'"><iconify-icon icon="material-symbols:video-library-outline"></iconify-icon> <a class="translated_text">library</a></li>
-        <li class="flex flex-col  items-center justify-center @if($activeLink=='history') active @endif"><iconify-icon icon="material-symbols:history"></iconify-icon> <a class="translated_text">history</a></li>
+        <li class="flex flex-col  items-center justify-center @if($activeLink=='history') active @endif" onclick="window.location='{{route('history')}}'"><iconify-icon icon="material-symbols:history"></iconify-icon> <a class="translated_text">history</a></li>
     </ul>
 </div>

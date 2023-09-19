@@ -71,10 +71,8 @@
                             </video>
                             <div
                                 class="top_buttons absolute top-0 left-0  w-full flex items-center justify-between h-3vw px-[--1vw]">
-                                <iconify-icon icon="mdi:play"
-                                              class="playShort fz-1.5vw text-white cursor-pointer"></iconify-icon>
-                                <iconify-icon icon="akar-icons:sound-on"
-                                              class="speakerShort fz-1.5vw text-white cursor-pointer"></iconify-icon>
+                                <iconify-icon icon="mdi:play" class="playShort fz-1.5vw text-white cursor-pointer"></iconify-icon>
+                                <iconify-icon icon="akar-icons:sound-on" class="speakerShort z-10 fz-1.5vw text-white cursor-pointer"></iconify-icon>
                             </div>
                             <div class="bottom_buttons absolute bottom-0 left-0  w-full  px-[--1vw]">
                                 <div>
