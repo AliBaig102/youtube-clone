@@ -14,7 +14,9 @@
 
                         <div class="image_container br-.5vw  relative w-full">
                             <div class="video_container aspect-video relative">
-                                <video src="{{asset('videos/video.mkv')}}" id="main_video"></video>
+                                <video id="main_video">
+                                    <source src="{{asset(path: 'videos/video.mp4')}}" type="video/mp4" />
+                                </video>
                                 <div class="absolute top-0 right-0 p-1">
                                     <iconify-icon icon="octicon:unmute-24" class="video_speaker bg-black p-1 br-round cursor-pointer"></iconify-icon>
                                 </div>
@@ -24,7 +26,7 @@
                             <div class="progressbar_container absolute bottom-0 flex flex-col justify-end w-full h-[--1vw]">
                                 <div class="progressbar_video hidden absolute aspect-video w-[--6vw] shadow-2xl border-2 overflow-hidden br-.3vw top-[-500%]">
                                     <span class="absolute bg-[--black-trans] w-full text-center left-50% bottom-0 text-[max(.6vw,5px)]" style="background:linear-gradient(to top,var(--black-trans),transparent);">12:00</span>
-                                    <video id="small_video"><source src="{{asset('videos/video.mkv')}}" type="video/mp4"/></video>
+                                    <video id="small_video"><source src="{{asset('videos/video.mkv')}}" type="video/mkv"/></video>
                                 </div>
                                 <div class="progressbar bg-[--white-trans] w-full br-round h-[4px]">
                                 <span class="progressbar_hover absolute h-[4px] bg-[--white-trans]"></span>
