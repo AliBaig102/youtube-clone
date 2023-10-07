@@ -5,7 +5,10 @@
 @endsection
 @section('content')
     <div class="content_area_container bg-white min-h-[max(100vh,50vw)] w-full sm:w-[calc(100%_-_var(--4vw))] absolute right-0 ">
-        <div class="content_area mt-[max(8vw,80px)] w-full">
+        <div class="content_area mt-[max(4vw,50px)] w-full">
+            <div class="flex justify-end m-[--1vw]">
+                <a class="py-[--03vw] px-[--1vw] bg-[--blue-trans] br-round cursor-pointer text-blue-500">manage</a>
+            </div>
             <div class="grid w-full px-[--05vw] gap-1vw mb-3 grid-cols-1 md-phone:grid-cols-2 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 min-[2000px]:grid-cols-5">
                 @for($i=0;$i<20;$i++)
                     <div class="card p-1 cursor-pointer grid grid-cols-1  br-.3vw">
@@ -65,6 +68,5 @@
     <x-sidebar-model active-link='subscription'></x-sidebar-model>
 @endsection
 @push('javascript')
-{{--    <script src="{{asset('js/tabs.js')}}"></script>--}}
     <script src="{{asset('js/content.js')}}"></script>
 @endpush

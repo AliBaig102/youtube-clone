@@ -49,16 +49,34 @@
                     </ul>
                     <div class="mx-auto flex items-center gap-1vw px-4 py-1 hover:bg-[--color3] w-fit cursor-pointer br-round mt-[--1vw]">
                         <iconify-icon icon="pajamas:remove"></iconify-icon>
-                        <a class="fz-1vw">Clear all watch history</a>
+                        <a class="fz-1vw" onclick="clearHistoryBtn()">Clear all watch history</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <x-popup-model class="h-[max(10vw,100px)] w-[max(40vw,300px)] p-[--05vw] relative">
+        <div>
+            <a class="fz-1.5vw">Clear watch history?</a>
+            <p class="fz-1vw mt-[--1vw]">
+                Your YouTube watch history will be cleared from this device, and your video recommendations will be reset.
+            </p>
+            <div class="absolute bottom-[--05vw] right-[--1vw] gap-1vw">
+                <a class="fz-1vw cursor-pointer py-[--05vw] px-[--1vw]" onclick="closePopup()">Cancel</a>
+                <a class="fz-1vw cursor-pointer py-[--05vw] px-[--1vw] bg-[--blue-trans] text-blue-500 br-round">Clear</a>
+            </div>
+        </div>
+    </x-popup-model>
     <x-sidebar-model active-link='history'></x-sidebar-model>
 @endsection
 @push('javascript')
     <script >
+        function clearHistoryBtn() {
+            document.querySelector('.popup_model_container').classList.add('active');
+        }
+        function closePopup(){
+            document.querySelector('.popup_model_container').classList.remove('active');
+        }
         const image_container=document.querySelectorAll('.image_container');
         const watch_latter_and_queue=document.querySelectorAll('.watch_latter_and_queue');
         image_container.forEach((btn,i)=>{

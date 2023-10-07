@@ -81,7 +81,7 @@ button {
     background: transparent;
 }
 ::placeholder {
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 input[type="text"]{
     border: none transparent;
@@ -333,7 +333,7 @@ nav iconify-icon[data-title]{
     text-overflow: ellipsis;
     max-height: max(2.5vw,30px);
     white-space: normal;
-    font-size: clamp(10px,1vw,20px);
+    /*font-size: clamp(10px,1vw,20px);*/
     line-height: 1.3;
     font-weight: 500;
 }
@@ -401,13 +401,13 @@ hr{
         display: flex;
     }
     & > iconify-icon{
-        @apply fz-1.3vw bg-black w-2vw-h-2vw d-flex br-.3vw cursor-pointer z-[2];
+        @apply fz-1.3vw bg-black w-2vw-h-2vw d-flex text-white br-.3vw cursor-pointer z-[2];
         &:hover:before{
             @apply -left-[210%] w-fit px-3;
         }
         &:before{
             content: attr(data-title);
-            @apply absolute whitespace-nowrap -left-[150%] h-[--2vw] w-0 overflow-hidden d-flex z-[-1] br-.3vw   bg-black fz-.8vw;
+            @apply absolute whitespace-nowrap -left-[150%] h-[--2vw] w-0 overflow-hidden d-flex z-[-1] br-.3vw text-white bg-black fz-.8vw;
             transition: left .5s,width .5s;
         }
     }
@@ -434,4 +434,56 @@ hr{
     & .delete_video_from_watch_history{
         @apply d-flex;
     }
+}
+.popup_model_container{
+    display: none;
+    &.active{
+        display: flex;
+    }
+}
+.likeVideo{
+    &:before{
+        content: '';
+        @apply absolute w-[1px] h-70% bg-[--color2] top-50% right-0;
+    }
+}
+.videoDescription{
+    height: var(--5vw);
+    padding-bottom: var(--3vw);
+    &.active{
+        height: fit-content;
+        & p{
+        -webkit-line-clamp: 100;
+        }
+    }
+    & P{
+        max-width: 95%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        white-space: normal;
+        font-weight: 500;
+        font-size: var(--1vw);
+    }
+    & #descriptionShowMore{
+        @apply absolute bottom-0 left-[--1vw] cursor-pointer ;
+    }
+}
+.videoControls_container{
+    background: linear-gradient(to bottom,transparent,var(--black-trans));
+    & iconify-icon{
+        @apply cursor-pointer fz-1.5vw ;
+    }
+}
+.videoProgressBar{
+    &:hover{
+ & .videoTimeline{
+    &:before{
+        content: '';
+        @apply w-[--05vw] h-[--05vw] top-50% -right-[--03vw] br-round bg-red-800 absolute;
+        }
+    }
+}
 }

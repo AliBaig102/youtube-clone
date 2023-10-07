@@ -14,27 +14,30 @@ const main_videos=document.querySelectorAll('.video_container #main_video');
 const small_videos=document.querySelectorAll('.video_container #small_video');
 main_container.forEach((btn,i)=>{
     btn.addEventListener('mouseover',e=>{
-        try {
             image_container[i].classList.add('active');
             playVideo(i);
-        }catch (error){
-            console.log(error);
-        }
-    })
+    });
     btn.addEventListener('mouseleave',e=>{
-        try {
             image_container[i].classList.remove('active');
             pauseVideo(i);
-        }catch (error){
-            console.log(error);
-        }
     })
 })
 const playVideo = (index) => {
+    try {
     main_videos[index].play();
+        //     console.log(result)
+        // }).catch(onerror=>console.log(onerror));
+    //     .then(result=>{
+    }catch (e) {
+        console.log(e);
+    }
 }
 const pauseVideo = (index) => {
+    try {
     main_videos[index].pause();
+    }catch (e) {
+        console.log(e);
+    }
 }
 main_videos.forEach((video,i)=>{
     video.addEventListener('loadeddata',e=>{

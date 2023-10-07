@@ -23,4 +23,5 @@ Route::view('/subscription','subscription')->name('subscription');
 Route::view('/shorts','shorts')->name('shorts');
 Route::view('/library','library')->name('library');
 Route::view('/history','history')->name('history');
+Route::view('/video','video')->name('video');
 Route::view('/','content')->name('home');

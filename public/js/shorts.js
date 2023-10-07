@@ -22,6 +22,7 @@ comment_box_off_btn.forEach((btn,i)=>{
         bottom_buttons[i].classList.toggle('active');
     })
 })
+let isVideoLoad=false;
 let isVideoPlay=false;
 let isSoundOn=true;
 playShort.forEach((btn,i)=>{
@@ -35,9 +36,26 @@ playShort.forEach((btn,i)=>{
 })
 const playVideo=(index)=>{
     short_video[index].play();
+    short_video[index].muted=false;
     playShort[index].setAttribute('icon','ic:baseline-pause');
     isVideoPlay=true;
 }
+short_video.forEach((video,i)=>{
+    video.addEventListener('canplay',e=>{
+    short_video[0].autoplay=true;
+    short_video[0].muted=false;
+    isVideoLoad=true;
+    playVideo(0);
+    });
+    short_video[i].autoplay=false;
+    short_video[i].muted=true;
+    video.addEventListener('ended',e=>{
+        console.log(e.target)
+    })
+})
+// window.onload=function (){
+//     short_video.forEach(video=>video.load());
+// }
 const pausedVideo=(index)=>{
     short_video[index].pause();
     playShort[index].setAttribute('icon','mdi:play');

@@ -67,7 +67,7 @@
                     </div>
                     <div class="relative gap-.5vw">
                         <div class="video bg-light br-.5vw overflow-hidden">
-                            <video id="short_video" src="{{asset('videos/video.mkv')}}">
+                            <video id="short_video" src="{{asset('videos/video.mkv')}}" autoplay>
                             </video>
                             <div
                                 class="top_buttons absolute top-0 left-0  w-full flex items-center justify-between h-3vw px-[--1vw]">
